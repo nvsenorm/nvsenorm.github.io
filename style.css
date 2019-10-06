@@ -30,21 +30,25 @@ body{
 	
 
 }
-.menu ul{
-	display: inline;
-}
+/*[class*="col-"]{
+	float: left;
+}*/
+/*.menu ul {
+	float: left;
+}*/
 
-.menu li{
+.menu li {
 	width: 25%;
 	float: left;
 	border-left: 1px solid #2c71b8;
+	position: relative;
 	
 
 }
-.menu li:last-child{
+.menu li:last-child {
 	border-right: 1px solid #2c71b8;
 }
-.menu a{
+.menu a {
 	display: block;
 	height: 50px;
     font-size: 21px;
@@ -54,10 +58,32 @@ body{
     font-weight: 300;
     text-decoration: none;
 }
-.menu a:hover{
+.menu a:hover {
 	background-color: #2c71b8;
 	color: white;
 }
+.submenu li{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	visibility: hidden;
+}
+.menu ul ul li :hover ul{
+	display: block;
+}
+/*.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;*/
+
 .col-md-9  {
   position: relative;
   width: 200px;
@@ -84,19 +110,21 @@ button {
   background-color: #2c71b8;
   background-repeat: no-repeat;
   background-image:  url(search.jpg);
-  /*background-color:#2c70b7 ;*/
   background-position: center;
 }
 .col-md-3{
-	float: left;
+	width: 25%;
+	display: inline;
+	/*float: left;*/
 }
-./*product-*/cart{
+div .cart{
 	height: 40px;
 	width: 40px;
 	background-image: url(22.jpg);
 	background-position: center;
 	position: relative;
 	background-repeat: no-repeat;
+	
 
 }
 div .product-cart{
@@ -104,5 +132,6 @@ div .product-cart{
 	position: absolute;
 	border-radius: 50%;
 	background-color: #2c71b8;
+	
 }
 
